@@ -1,4 +1,4 @@
-# Limpia el código
+# Enumeraciones: Limpia el código
 El código en `roles.c` funciona correctamente, pero tiene varios detalles que hacen que no sea claro.
 Corrígelos y asegúrate que el código sigue funcionando luego de cambiarlo.
 
