@@ -1,4 +1,4 @@
-# programacion-estructurada
+# Programación Estructurada
 Materiales y ejercicios para la materia Programación Estructurada
 
 ## Índice de lecciones 
