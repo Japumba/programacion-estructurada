@@ -15,7 +15,7 @@
  * 
  * 
  * Observa la funcion de testSwapElements:
- *   utilizamos la funcion del ejercicio 4, "compare two arrays",
+ *   utilizamos la funcion del ejercicio 5, "compare two arrays",
  *   en lugar de solo comparar los elementos cambiados.
  * 
  *   Con esto, nos aseguramos que solamente los elementos deseados
