@@ -43,7 +43,7 @@ int compareArrays(int array[], int otherArray[], unsigned long size);
 
 int main()
 {
-    int testCount = 2;
+    int testCount = 3;
     int passedTests = 0;
 
     int test1[6] = {1, 7, -288, 198, 5081, 7};
