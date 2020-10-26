@@ -1,0 +1,6 @@
+# Strings
+
+## Ejercicios
+1. [Declarar un string](exercises/1_declare_hello_world.c)
+2. [Longitud de un string](exercises/2_string_length.c)
+3. [a MAYUS](exercises/3_toUppercase.c)
