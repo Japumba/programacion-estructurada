@@ -23,10 +23,12 @@
  * 
  * 1. Crea una variable poem, que pueda contener todo el poema de Gandalf
  * 
- * 2. Inicializa la variable con todas las líneas del poema. Haz esto en el mismo
- *    momento en que se declara la variable.
+ * 2. Inicializa la variable con todas las líneas del poema,
+ *    SIN PONER EL \n AL FINAL.
+ *    Haz esto en el mismo momento en que se declara la variable.
  * 
  * 3. Codifica un ciclo for (sólo uno, sin anidar), que imprima el poema.
+ *    Es en este for en el que debes poner los saltos de línea.
  * 
  * 4. Limpieza de código! Crea una función printStringList() que reciba la lista
  *    de strings y la imprima.
@@ -46,7 +48,7 @@
  * 
  *     printExpectedResults();
  * 
- *     printf("Tu poema:\n\n");
+ *     printf("\nTu poema:\n\n");
  *     
  *     << llamada a tu funcion para imprimir poema >>
  *     
@@ -76,7 +78,7 @@ int main()
      * Inicialízala aquí mismo con el poema
      */
 
-    printf("Tu poema:\n\n");
+    printf("\nTu poema:\n\n");
     /**
      * EJERCICIO 3:
      * Escribe aquí el ciclo for para imprimir el poema
