@@ -23,16 +23,31 @@
  * 
  * 4. Utiliza la función del paso 3 para obtener un numero aleatorio
  *    dentro del rango correcto (nombres de la lista) y, en un ciclo for,
+ *    usarlo como indice del arreglo de nombres para 
  *    hacer la prueba de obtener 5 nombres aleatorios, uno después del otro.
  *    
- *    Deberían ser distintos cada vez (aunque podrían repetirse en una ejecución),
- *    ya que nuestra función de random sí podria generar dos veces el mismo número.
+ *    Deberían ser aleatorios, y si ejecutas el programa dos veces, deberian
+ *    ser en un orden tambien diferente.
+ * 
+ *    Puede que en una sola ejecución se repita un nombre, es normal porque
+ *    nuestra función randomIntegerFromZeroUpTo() sí puede dar dos veces el mismo
+ *    (¡es aleatorio!)
  */
 
 #include <stdio.h>
 
 unsigned int randomIntegerFromZeroUpTo(unsigned int max)
 {
+    /**
+     * EJERCICIO 2:
+     * Escribe en este comentario los recursos que consultaste para saber
+     * cómo obtener números aleatorios en C.
+     * 
+     * – 
+     * – 
+     * – 
+     */
+
     /**
      * EJERCICIO 3:
      * Implementa la función que regrese un número aleatorio entre 0 y max, incluyendo max.
