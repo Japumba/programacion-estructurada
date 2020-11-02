@@ -87,7 +87,7 @@ gcc main.c -o tutorial-args.exe -Wall
 ./tutorial-args.exe le pasamos mas de dos argumentos
 ```
 
-# Ejercicio: progrma que suma N numeros
+# Ejercicio: programa que suma N numeros
 Crea un programa que, al ser ejecutado, reciba una cantidad de números del usuario e imprima la suma de todos ellos.
 
 - Que el programa pueda recibir numeros enteros o flotantes (tip: ver las funciones [atoi](https://www.tutorialspoint.com/c_standard_library/c_function_atoi.htm) y [atof](https://www.tutorialspoint.com/c_standard_library/c_function_atof.htm))
