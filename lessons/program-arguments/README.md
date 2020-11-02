@@ -1,6 +1,44 @@
 # Argumentos del programa
-El código de este tutorial puede ayudarte a entender mejor cómo se reciben los argumentos del main
-y cómo puedes usarlos.
+Hasta ahora, hemos trabajado nuestros programas con una función main que regresa un entero y no recibe parámetros, muy parecida a esta:
+```c
+int main()
+{
+   // do some stuff
+   
+   return 0;
+}
+```
+
+Hoy conoceremos cómo enviar parámetros de ejecución a nuestro programa desde la línea de comandos.
+
+## Función main con argumentos
+Existe una forma alternativa de declarar la función main en un programa; probablemente la has encontrado en algún tutorial en línea, o declarada así al comenzar un proyecto en tu IDE.
+```c
+int main(int argc, char *argv[])
+{
+    // validate arguments
+    
+    // do some stuff
+    
+    return 0;
+}
+```
+¿Qué son esos dos argumentos que agregamos a la función main?
+- `int argc`: es corto de "argument count", e indica el número de argumentos que recibió la función main.
+- `char *argv[]`: es corto de "argument values", y es una lista de strings que contiene los valores, en strings, de los argumentos con los que se ejecutó el programa.
+
+ℹ️ La forma en que se expresó el arreglo de strings (`char *argv[]`) es distinta a lo que has estado utilizando (`char listaDeStrings[][20]`); es algo que conocerás en la siguiente materia _Programación con memoria dinámica_, cuando conozcas los apuntadores.
+
+Declarar en un programa la función main de esta manera nos permite, al ejecucar el programa desde la consola, pasarle argumentos para su ejecución. Esto es algo que hemos estado haciendo todo el semestre, cuando compilamos desde la consola:
+```shell
+gcc main.c -o main.exe -Wall
+```
+- Ejecutamos el programa `gcc`
+- Le pasamos un argumento `main.c`, que el programa interpreta como "este es el archivo fuente a compilar"
+- Le pasamos un argumento `-o`, que el programa interpreta como "el siguiente argumento es el nombre que le tengo que poner al compilado!"
+- Le pasamos un argumento `main.exe`, que el programa interpreta como el nombre del compilado que generará (porque el anterior es `-o`)
+- Le pasamos un argumento `-Wall`, que el programa interpreta como "imprime en la consola todos los warnings que te encuentres al compilar"
+```
 
 ## Tutorial:
 1. Lee [el código](tutorial_program_args.c) y trata de entenderlo.
