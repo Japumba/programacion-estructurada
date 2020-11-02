@@ -33,8 +33,10 @@ El programa `gcc` está diseñado para:
 - Validar los argumentos que recibe, y dar mensajes de error si no son correctos.
 - Comportarse de forma distinta cada vez que se ejecuta, dependiendo de los argumentos.
 
+Nosotros podemos lograr esto también para nuestros programas, modificando la función main.
+
 ## La función main con argumentos
-Existe una forma alternativa de declarar la función main en un programa; probablemente la has encontrado en algún tutorial en línea, o declarada así al comenzar un proyecto en tu IDE.
+Existe una forma alternativa de declarar la función main en un programa, que nos permite recibir parámetros al ejecutar; probablemente la has encontrado en algún tutorial en línea o declarada así al comenzar un proyecto en tu IDE.
 ```c
 int main(int argc, char *argv[])
 {
@@ -55,12 +57,18 @@ Entonces, teniendo estos dos argumentos, podemos hacer cosas con lo que el usuar
 ```c
 int main(int argc, char *argv[])
 {
-    if(argc
+    // revisar cuantos argumentos nos envió
+    //     imprimir un error si no son correctos
+    
+    // do some stuff
+    
     return 0;
 }
 ```
 
-## Tutorial:
+Revisa este código tutorial para que conozcas más a detalle cómo funcionan estos argumentos.
+
+## Código tutorial:
 1. Lee [el código](tutorial_program_args.c) y trata de entenderlo.
 
 2. Compila el programa, usando esta linea.
