@@ -6,3 +6,4 @@ Materiales y ejercicios para la materia Programación Estructurada
 ### [Arreglos](lessons/arrays)
 ### [Strings](lessons/strings)
 ### [Enumeraciones](lessons/enums)
+### [Argumentos de un programa](lessons/program-arguments)
