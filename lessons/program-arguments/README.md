@@ -53,22 +53,9 @@ int main(int argc, char *argv[])
 
 ℹ️ La forma en que se expresó el arreglo de strings (`char *argv[]`) es distinta a lo que has estado utilizando (`char listaDeStrings[][20]`); es algo que conocerás en la siguiente materia _Programación con memoria dinámica_, cuando conozcas los apuntadores.
 
-Entonces, teniendo estos dos argumentos, podemos hacer cosas con lo que el usuario "nos envíe" en los argumentos:
-```c
-int main(int argc, char *argv[])
-{
-    // revisar cuantos argumentos nos envió
-    //     imprimir un error si no son correctos
-    
-    // do some stuff
-    
-    return 0;
-}
-```
+### argc y argv
+Agregando los argumentos `argc` y `argv` a nuestro programa podemos recibir argumentos al ejecutar nuestro programa. Exploremos con un código ejemplo cómo se comportan estos argumentos al ejecutarse.
 
-Revisa este código tutorial para que conozcas más a detalle cómo funcionan estos argumentos.
-
-## Código tutorial:
 1. Lee [el código](tutorial_program_args.c) y trata de entenderlo.
 
 2. Compila el programa, usando esta linea.
