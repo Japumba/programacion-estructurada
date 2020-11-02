@@ -87,6 +87,16 @@ gcc main.c -o tutorial-args.exe -Wall
 ./tutorial-args.exe le pasamos mas de dos argumentos
 ```
 
+# Ejercicio: progrma que suma N numeros
+Crea un programa que, al ser ejecutado, reciba una cantidad de números del usuario e imprima la suma de todos ellos.
+
+- Que el programa pueda recibir numeros enteros o flotantes (tip: ver las funciones [atoi](https://www.tutorialspoint.com/c_standard_library/c_function_atoi.htm) y [atof](https://www.tutorialspoint.com/c_standard_library/c_function_atof.htm))
+- Si alguno de los argumentos no es un numero (e.g. `sumar 10 200 hola`), que el programa imprima un numero de error.
+
+Ejemplo de uso:
+
+![](img/sumador_example.png)
+
 
 # Ejercicio Nombre aleatorio desde argumentos
 Este ejercicio tiene mucho parecido con el ejercicio de strings: [nombre aleatorio](/lessons/strings), pero modificarás algunas cosas para recibir la lista de nombres como argumentos al ejecutar el programa.
