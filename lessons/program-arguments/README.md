@@ -11,7 +11,29 @@ int main()
 
 Hoy conoceremos cómo enviar parámetros de ejecución a nuestro programa desde la línea de comandos.
 
-## Función main con argumentos
+## Pasarle argumentos a un programa
+Pasarle argumentos a un programa es algo que hemos estado haciendo durante todo el semestre, cuando compilamos desde la consola:
+```shell
+gcc main.c -o main.exe -Wall
+```
+- Ejecutamos el programa `gcc`
+- Le pasamos un argumento `main.c`, que el programa interpreta como "este es el archivo fuente a compilar"
+- Le pasamos un argumento `-o`, que el programa interpreta como "el siguiente argumento es el nombre que le tengo que poner al compilado!"
+- Le pasamos un argumento `main.exe`, que el programa interpreta como el nombre del compilado que generará (porque el anterior es `-o`)
+- Le pasamos un argumento `-Wall`, que el programa interpreta como "imprime en la consola todos los warnings que te encuentres al compilar"
+
+Si ejecutamos el programa `gcc` sin especificarle argumentos, obtendremos un mensaje de error:
+```shell
+$ gcc
+clang: error: no input files
+```
+
+El programa `gcc` está diseñado para:
+- Recibir uno o más argumentos al ser ejecutado.
+- Validar los argumentos que recibe, y dar mensajes de error si no son correctos.
+- Comportarse de forma distinta cada vez que se ejecuta, dependiendo de los argumentos.
+
+## La función main con argumentos
 Existe una forma alternativa de declarar la función main en un programa; probablemente la has encontrado en algún tutorial en línea, o declarada así al comenzar un proyecto en tu IDE.
 ```c
 int main(int argc, char *argv[])
@@ -29,15 +51,13 @@ int main(int argc, char *argv[])
 
 ℹ️ La forma en que se expresó el arreglo de strings (`char *argv[]`) es distinta a lo que has estado utilizando (`char listaDeStrings[][20]`); es algo que conocerás en la siguiente materia _Programación con memoria dinámica_, cuando conozcas los apuntadores.
 
-Declarar en un programa la función main de esta manera nos permite, al ejecucar el programa desde la consola, pasarle argumentos para su ejecución. Esto es algo que hemos estado haciendo todo el semestre, cuando compilamos desde la consola:
-```shell
-gcc main.c -o main.exe -Wall
-```
-- Ejecutamos el programa `gcc`
-- Le pasamos un argumento `main.c`, que el programa interpreta como "este es el archivo fuente a compilar"
-- Le pasamos un argumento `-o`, que el programa interpreta como "el siguiente argumento es el nombre que le tengo que poner al compilado!"
-- Le pasamos un argumento `main.exe`, que el programa interpreta como el nombre del compilado que generará (porque el anterior es `-o`)
-- Le pasamos un argumento `-Wall`, que el programa interpreta como "imprime en la consola todos los warnings que te encuentres al compilar"
+Entonces, teniendo estos dos argumentos, podemos hacer cosas con lo que el usuario "nos envíe" en los argumentos:
+```c
+int main(int argc, char *argv[])
+{
+    if(argc
+    return 0;
+}
 ```
 
 ## Tutorial:
@@ -73,12 +93,12 @@ gcc main.c -o tutorial-args.exe -Wall
 ```
 
 
-## Ejercicio Nombre aleatorio desde argumentos
+# Ejercicio Nombre aleatorio desde argumentos
 Este ejercicio tiene mucho parecido con el ejercicio de strings: [nombre aleatorio](/lessons/strings), pero modificarás algunas cosas para recibir la lista de nombres como argumentos al ejecutar el programa.
 
 Esto nos restringe, claro, a solo usar una palabra por nombre.
 
-### Problema
+## Problema
 Queremos un programa al que le podamos pasar una lista de nombres, de una sola palabra cada uno, y nos imprima en la consola uno de ellos de forma aleatoria.
 
 - Si no se indica ningún nombre, se debe mostrar un mensaje de error.
