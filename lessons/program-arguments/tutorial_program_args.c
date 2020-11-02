@@ -5,9 +5,9 @@ int main(int argc, char const *argv[])
 {
     if (argc == 0)
     {
-        printf("Algo está muy, muy mal! esto no debe pasar nunca\n");
-        printf("porque siempre se pasa al menos un argumento:\n");
-        printf("el nombre del programa\n");
+        printf("Esto podría suceder, pero no es común porque existe una convención\n");
+        printf("que sugiere que siempre se ejecute un programa con su nombre como\n");
+        printf("primer argumento.\n");
         exit(-1);
     }
 
