@@ -23,7 +23,7 @@
  * 4. Crea un tipo estructura con el typedef Time, que contenga los siguientes campos:
  *    – hora,    entero de [0 a 23]
  *    – minuto,  entero de [0 a 59]
- *    – segundo, real   de [0 a 60), con 6 decimales de precision por favor.
+ *    – segundo, real   de [0 a 60), con al menos 8 decimales de precision por favor.
  *    – timezone, strings de hasta 6 caracteres con el codigo de la zona horaria
  *      (ejemplos aqui: https://www.timeanddate.com/time/zones/)
  * 
