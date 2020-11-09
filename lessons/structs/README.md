@@ -10,7 +10,7 @@ Un struct en C, también llamado "tipo estructura", es un tipo de dato conformad
 Este tipo de dato estructura **es definido por el programador**, es decir, el programador primero declara cómo estará compuesto este tipo, le da un nombre único y podrá posteriormente usarlo (es similar en este sentido a una enumeración, también definida por el programador).
 
 
-## Declarar un tipo estructura
+### Declarar un tipo estructura
 Para declarar un tipo estructura, utilizamos la palabra reservada `struct`, seguida del nombre de la estructura y a continuación, cada uno de los campos que conforman a este tipo estructura.
 
 Cada campo tiene un tipo de dato y un identificador.
@@ -28,7 +28,7 @@ struct player
 👀 _En la declaración de un tipo estructura no se asignan valores; lo que estamos haciendo es creando el tipo, para que esté disponible después. Cuando declaremos una variable de este tipo, le asignaremos valores._
 
 
-## Crear una variable de tipo estructura
+### Crear una variable de tipo estructura
 Una vez declarado el tipo estructura y todos sus campos, podemos usarlo para declarar variables y asignarle valores a sus campos, por ejemplo, para declarar una variable en nuestra función main que sea el jugador 1 y otra para el jugador 2.
 
 Una vez declarada una variable de un tipo estructura, podemos asignarle valores a cada uno de sus campos, accediendo a ellos con el operador de acceso: el punto `.`
@@ -73,7 +73,7 @@ int main()
 ```
 
 
-## Inicializar una variable de tipo estructura
+### Inicializar una variable de tipo estructura
 Podemos inicializar una variable de un tipo de dato estructura similar a un arreglo. Indicamos entre las llaves cada uno de los campos, en el orden en el que fueron declarados:
 
 ```C
@@ -97,7 +97,7 @@ int main()
 ```
 
 
-## Tipos struct como argumentos
+### Tipos struct como argumentos
 Podemos declarar una función que tome como argumento un valor de tipo estructura, para utilizarlo dentro.
 
 ```C
@@ -166,7 +166,7 @@ int main()
 }
 ```
 
-## Regresar un tipo estrucutra
+### Regresar un tipo estrucutra
 Es posible regresar un tipo estructura de una funcion, para asignarlo a una variable o usarlo posteriormente:
 ```C
 #include <stdio.h>
@@ -193,7 +193,7 @@ int main()
 }
 ```
 
-# Typedef
+## Typedef
 Escribir el "nombre completo" de una estructura cada vez es muy largo y repetitivo. Afortunadamente, C tiene una herramienta llamada `typedef` (corto de "type definition") que nos permite ponerle un "sobrenombre" a un tipo de dato.
 
 Con `typedef`, podemos indicarle al compilador que `Point2D` sea un sobrenombre para el tipo de dato `struct point`, de esta forma:
@@ -259,7 +259,7 @@ Movement askForMovement()
 }
 ```
 
-# Estructuras anidadas
+## Estructuras anidadas
 Ya que los campos de un struct son declaraciones y cada uno tiene un tipo de dato, es posible que un campo en un struct sea de un tipo struct. Con esto, es posible simplificar el ejemplo anterior del jugador:
 
 ```C
