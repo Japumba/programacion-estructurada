@@ -2,22 +2,28 @@
 
 /**
  * INTRODUCTION:
- * En este ejercicio trabajarás con estructuras y funciones diseñadas para
- * representar horas y fechas.
+ * En este ejercicio trabajarás con estructuras y funciones diseñadas
+ * para representar horas y fechas.
  * 
  * INSTRUCCIONES:
- * 1. Lee el código, compílalo, ejecútalo y repara el bug. Escribe aqui abajo
- *    cual era el bug y como lo corregiste.
- *    = 
+ * 
+ * 1. Primero que nada, este código base tiene un bug al imprimir la fecha.
+ * 
+ *    Lee el código y compílalo. Apunta aqui los warnings que obtengas y trata de explicarlos.
+ *    =
+ * 
+ *   Luego, corrige el bug de la impresión de la fecha.
+ * 
  * 
  * 2. Agrega un typedef a struct_date de tal forma que podamos referirnos y usarlo como Date;
  *   
- * 3. Modifica el programa para que use este typedef en lugar de struct struct_date
+ * 3. Modifica el programa para que use Date en lugar de struct struct_date.
+ *    A partir de ahora, procura usar typedefs para tus estructuras y enums.
  * 
- * 4. Crea un tipo estructura con el typedef Time, que guarde contenga los siguientes campos:
- *    – hora,    de 0 a 23
- *    – minuto,  de 0 a 59
- *    – segundo, de 0 a 59
+ * 4. Crea un tipo estructura con el typedef Time, que contenga los siguientes campos:
+ *    – hora,    entero de [0 a 23]
+ *    – minuto,  entero de [0 a 59]
+ *    – segundo, real   de [0 a 60), con 6 decimales de precision por favor.
  *    – timezone, strings de hasta 6 caracteres con el codigo de la zona horaria
  *      (ejemplos aqui: https://www.timeanddate.com/time/zones/)
  * 
@@ -25,7 +31,7 @@
  * 
  * 5. Crea una función void printTime(Time hora),
  *    que reciba un valor de tipo Time y lo imprima en la consola
- *    en formato hh:mm:ss (TMZ)
+ *    en formato hh:mm:ss.ssss (TMZ)
  *    donde TMZ son las 3 letras de la zona horaria
  * 
  *    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -42,7 +48,7 @@
  *    que reciba un valor de tipo DateTime y lo imprima en
  *    la consola con el siguiente formato:
  *    
- *    dd/mm/yyyy hh:mm:ss (TMZ)
+ *    dd/mm/yyyy hh:mm:ss.ssss (TMZ)
  * 
  *    Asegúrate que la función printDateTime() mande llamar a las otras dos funciones, pasando
  *    correctamente como parámetro los campos.
@@ -110,6 +116,8 @@ int main()
      */
 }
 
+// Imprime una fecha en formato
+// dd/mm/yyyy
 void printDate(struct struct_date date)
 {
     printf("%i/%2i/%i", date);
