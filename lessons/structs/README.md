@@ -67,7 +67,7 @@ int main()
 ```
 
 
-## Inicializar una variable de tipo etructura
+## Inicializar una variable de tipo estructura
 Podemos inicializar una variable de un tipo de dato estructura similar a un arreglo. Indicamos entre las llaves cada uno de los campos, en el orden en el que fueron declarados:
 
 ```C
@@ -187,7 +187,7 @@ int main()
 }
 ```
 
-## Typedef
+# Typedef
 Escribir el "nombre completo" de una estructura cada vez es muy largo y repetitivo. Afortunadamente, C tiene una herramienta llamada `typedef` (corto de "type definition") que nos permite ponerle un "sobrenombre" a un tipo de dato.
 
 Con `typedef`, podemos indicarle al compilador que `Point2D` sea un sobrenombre para el tipo de dato `struct point`, de esta forma:
@@ -206,8 +206,10 @@ typedef struct point Point2D;
 
 // crea un nuevo punto y lo regresa, con los valores indicados
 // hemos cambiado de struct point a Point2D, para que sea mas corto.
+// en lugar de struct point pointWithValues(char name[10], int x, int y)
 Point2D pointWithValues(char name[10], int x, int y)
 {
+    // en lugar de struct point newPoint = {x, y};
     Point2D newPoint = {x, y};
     strcpy(newPoint.name, name);
     return newPoint;
@@ -216,6 +218,7 @@ Point2D pointWithValues(char name[10], int x, int y)
 int main()
 {
     // tambien para declarar las variables
+    // en lugar de // struct point p = ...
     Point2D p = pointWithValues("Point X", 42, 1337);
   
     printf("point: %s(%i, %i)\n",p.name, p.x, p.y);
@@ -232,7 +235,7 @@ typedef struct point {
 
 Además, podemos hacerlo con otros tipos de datos como las enumeraciones; con esto, ya no tenemos que escribir `enum movement move;`, sino `Movement move`;
 ```C
-typedef enum {
+typedef enum movement{
     UP = 'w',
     LEFT = 'a',
     DOWN = 's',
@@ -241,6 +244,7 @@ typedef enum {
 
 Movement askForMovement()
 {
+    // en lugar de enum movement move;
     Movement move;
 
     // ... codigo para pedir al usuario un movimiento
