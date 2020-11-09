@@ -67,7 +67,7 @@ int main()
 ```
 
 
-## Inicializar una variable de tipo etructura
+## Inicializar una variable de tipo estructura
 Podemos inicializar una variable de un tipo de dato estructura similar a un arreglo. Indicamos entre las llaves cada uno de los campos, en el orden en el que fueron declarados:
 
 ```C
@@ -187,7 +187,7 @@ int main()
 }
 ```
 
-## Typedef
+#Typedef
 Escribir el "nombre completo" de una estructura cada vez es muy largo y repetitivo. Afortunadamente, C tiene una herramienta llamada `typedef` (corto de "type definition") que nos permite ponerle un "sobrenombre" a un tipo de dato.
 
 Con `typedef`, podemos indicarle al compilador que `Point2D` sea un sobrenombre para el tipo de dato `struct point`, de esta forma:
