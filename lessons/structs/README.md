@@ -248,3 +248,73 @@ Movement askForMovement()
     return move;
 }
 ```
+
+# Estructuras anidadas
+Ya que los campos de un struct son declaraciones y cada uno tiene un tipo de dato, es posible que un campo en un struct sea de un tipo struct. Con esto, es posible simplificar el ejemplo anterior del jugador:
+
+```C
+typedef struct struct_position {
+    int x, y;
+} Position;
+
+// Contiene la informacion de un jugador en el mapa
+typedef struct player
+{
+    char avatar;         // campo de tipo char, llamado avatar.
+    char name[15];       // podemos poner campos que sean arreglos o matrices.
+
+    Position position;   // un solo campo de tipo Position, en lugar de dos campos de tipo int, para almacenar la posicion
+    unsigned int health; // campo de tipo unsigned int, para almacenar la vida.
+} Player;
+```
+
+Para declarar e inicializar, es similar a las matrices: cuando inicializamos el campo "anidado", necesitamos indicarlo con otras llaves, tal como inicializando una estructura.
+
+Para acceder, usamos varias veces el operador de acceso punto (`.`), para acceder a los campos del struct anidado.
+
+```C
+#include <stdio.h>
+
+typedef struct struct_position {
+    int x, y;
+} Position;
+
+// Contiene la informacion de un jugador en el mapa
+typedef struct player
+{
+    char avatar;         // campo de tipo char, llamado avatar.
+    char name[15];       // podemos poner campos que sean arreglos o matrices.
+
+    Position position;   // un solo campo de tipo Position, en lugar de dos campos de tipo int, para almacenar la posicion
+    unsigned int health; // campo de tipo unsigned int, para almacenar la vida.
+} Player;
+
+void printPlayer(Player p)
+{
+    printf("(%c) %s [", p.avatar, p.name);
+
+    for(int i=0; i < p.health; i++){
+        printf("<3");
+        
+        if(i != p.health-1)
+          printf(" ");
+    }
+
+    printf("]\n");
+
+    // accedemos a los campos X y Y del campo POSITION del jugador
+    printf("pos: (%i, %i)\n", p.position.x, p.position.y);
+}
+
+int main()
+{
+    Player p1 = {
+        'C',
+        "Cuasimodo",
+        {42, 1337}, // posicion, una estructura de tipo Position
+        3
+    };
+
+    printPlayer(p1);
+}
+```
