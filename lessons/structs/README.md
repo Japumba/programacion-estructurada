@@ -3,6 +3,7 @@
 ## Ejercicios
 - [1. Operaciones con vectores](exercises/vector.c)
 - [2. Fecha y hora](exercises/datetime.c)
+- [3. Student Info](exercises/student_info.c)
 
 ## Contenido
 Un struct en C, también llamado "tipo estructura", es un tipo de dato conformado por muchos elementos nombrados, o "campos", que están guardados de forma secuencial y **pueden ser de distinto tipo**.
