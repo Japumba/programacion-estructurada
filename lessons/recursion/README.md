@@ -5,7 +5,7 @@ Dado un número N, obtén la suma de los dígitos de N; si ese valor tiene más 
 
 Implementa una función **RECURSIVA** que calcule la raíz digital de un número.
 
-Toma [este código](/digital_root.c) como base.
+Toma [este código](exercises/digital_root.c) como base.
 
 Nota: Esto solo aplica para números naturales.
 
