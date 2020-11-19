@@ -5,6 +5,8 @@
  * INSTRUCCIONES:
  * 1. Declara un string que pueda contener al menos 13 caracteres e inicialízalo
  *    con el texto "Hello, World" con un enter al final.
+ * 
+ * Cuando veas el mensaje "OK! Funcion implementada correctamente" significa que has terminado.
  */
 
 int main()
