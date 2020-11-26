@@ -12,6 +12,8 @@
  * 1. Compila y ejecuta el codigo. Observa el tamaño actual de la estructura User.
  * 
  * 2. Modifica la estructura, usando campos de bits, para que no pase del tamaño deseado
+ *    
+ *    debes ver el mensaje "Excelente!"
  * 
  * 3. Agrega enumeraciones para que al asignar los valores a una estructura
  *    se entienda lo que se quiere asignar (por ejemplo, DMAF en lugar de 2)
