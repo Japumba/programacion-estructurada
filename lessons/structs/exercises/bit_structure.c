@@ -16,7 +16,7 @@
  * 3. 
  */
 
-#define MAX_DESIRED_STRUCT_SIZE 5
+#define MAX_DESIRED_STRUCT_SIZE 9
 
 enum ESTATUS_ACADEMICO
 {
@@ -28,12 +28,12 @@ enum ESTATUS_ACADEMICO
 
 typedef struct
 {
+  char matricula[8];                 // hasta 7 letras
   unsigned char es_admin;        // 0 = false, 1 = true
   unsigned char departamento_id; // 0 = DESI, 1 = DPTI, 2 = DMAF, 3 = DIA, 4 = DEAM, 5 = DFIH
   unsigned char estatus_academico;
   unsigned char tiene_acceso_estacionamiento; // 0 = false, 1 = true
   unsigned char tiene_acceso_laboratorios;    // 0 = false, 1 = true
-  unsigned int matricula;
 } User;
 
 void printUser(User u);
@@ -41,12 +41,13 @@ void printUser(User u);
 int main()
 {
   User user1 = {
+      "677549",
       0, // false
       2, // DMAF
       ACTIVO,
       0, // false
-      1, // true
-      677549};
+      1  // true
+  };
 
   printUser(user1);
 
@@ -66,5 +67,5 @@ int main()
 
 void printUser(User u)
 {
-  printf("usuario [%u]\n", u.matricula);
+  printf("usuario [%s]\n", u.matricula);
 }
