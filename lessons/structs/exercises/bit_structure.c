@@ -13,7 +13,8 @@
  * 
  * 2. Modifica la estructura, usando campos de bits, para que no pase del tamaño deseado
  * 
- * 3. 
+ * 3. Agrega enumeraciones para que al asignar los valores a una estructura
+ *    se entienda lo que se quiere asignar (por ejemplo, DMAF en lugar de 2)
  */
 
 #define MAX_DESIRED_STRUCT_SIZE 9
