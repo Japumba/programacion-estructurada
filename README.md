@@ -12,9 +12,9 @@
         5. Archivos generados.
 
 2. Elementos del lenguaje C
-    1. [Comentarios, identificadores y palabras reservadas](./2_elementos_del_lenguaje_c/1_comentarios_ids_palabras_reservadas.md)
-    2. Variables y declaración
-    3. Tipos de datos y literales: int, float, double, char
+    1. [Comentarios, identificadores y palabras reservadas](./contenido/introduccion/2_elementos_del_lenguaje_c/1_comentarios_ids_palabras_reservadas.md)
+    2. [Variables y declaración](./contenido/introduccion/2_elementos_del_lenguaje_c/2_variables_y_declaracion.md)
+    3. [Tipos de datos y literales: int, float, double, char](./contenido/introduccion/2_elementos_del_lenguaje_c/3_tipos_de_datos_y_literales.md)
     4. Impresión de variables y formatos de impresión: printf
     5. Modificadores: const, short, long, unsigned
     6. Obtención del tamaño de un dato: sizeof
