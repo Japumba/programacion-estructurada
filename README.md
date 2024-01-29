@@ -20,11 +20,20 @@
         1. [Overflow](./contenido/introduccion/2_elementos_del_lenguaje_c/5_1_overflow.md)
     6. [Obtención del tamaño de un dato: sizeof](./contenido/introduccion/2_elementos_del_lenguaje_c/6_sizeof.md)
     7. [Extra: primer vistazo a las funciones.](./contenido/introduccion/2_elementos_del_lenguaje_c/7_funciones_1.md)
-    8. Representación de los primitivos en memoria
+    8. [Primer vistazo a condicionales](./contenido/introduccion/2_elementos_del_lenguaje_c/8_condicionales_1.md)
+    9. Representación de los primitivos en memoria
         1. Complemento a 2
         2. Estándar IEEE 754
-    9. Conversión entre tipos
-    10. Entrada estándar: scanf
+    10. Conversión entre tipos
+    11. Entrada estándar: scanf
+
+3. Control de flujo
+    1. Operadores
+        1. Aritméticos
+        2. De asignación
+        3. A nivel de bits
+        4. Precedencia de operadores
+        5. Lógicos: relacionales, condicionales, ternario, precedencia
 
 # Programación Estructurada
 Materiales y ejercicios para la materia Programación Estructurada
