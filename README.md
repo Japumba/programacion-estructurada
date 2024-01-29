@@ -19,11 +19,12 @@
     5. [Modificadores: const, short, long, unsigned](./contenido/introduccion/2_elementos_del_lenguaje_c/5_modificadores.md)
         1. [Overflow](./contenido/introduccion/2_elementos_del_lenguaje_c/5_1_overflow.md)
     6. [Obtención del tamaño de un dato: sizeof](./contenido/introduccion/2_elementos_del_lenguaje_c/6_sizeof.md)
-    7. Representación de los primitivos en memoria
+    7. [Extra: primer vistazo a las funciones.](./contenido/introduccion/2_elementos_del_lenguaje_c/7_funciones_1.md)
+    8. Representación de los primitivos en memoria
         1. Complemento a 2
         2. Estándar IEEE 754
-    8. Conversión entre tipos
-    9. Entrada estándar: scanf
+    9. Conversión entre tipos
+    10. Entrada estándar: scanf
 
 # Programación Estructurada
 Materiales y ejercicios para la materia Programación Estructurada
