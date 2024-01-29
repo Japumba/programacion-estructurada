@@ -15,8 +15,9 @@
     1. [Comentarios, identificadores y palabras reservadas](./contenido/introduccion/2_elementos_del_lenguaje_c/1_comentarios_ids_palabras_reservadas.md)
     2. [Variables y declaración](./contenido/introduccion/2_elementos_del_lenguaje_c/2_variables_y_declaracion.md)
     3. [Tipos de datos y literales: int, float, double, char](./contenido/introduccion/2_elementos_del_lenguaje_c/3_tipos_de_datos_y_literales.md)
-    4. Impresión de variables y formatos de impresión: printf
+    4. [Impresión de variables y formatos de impresión: printf](./contenido/introduccion/2_elementos_del_lenguaje_c/4_impresion_y_formatos.md)
     5. Modificadores: const, short, long, unsigned
+        1. [Overflow](./contenido/introduccion/2_elementos_del_lenguaje_c/5_1_overflow.md)
     6. Obtención del tamaño de un dato: sizeof
     7. Representación de los primitivos en memoria
         1. Complemento a 2
