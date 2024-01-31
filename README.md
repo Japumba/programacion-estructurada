@@ -22,7 +22,7 @@
     7. [Extra: primer vistazo a las funciones.](./contenido/introduccion/2_elementos_del_lenguaje_c/7_funciones_1.md)
     8. [Primer vistazo a condicionales](./contenido/introduccion/2_elementos_del_lenguaje_c/8_condicionales_1.md)
     9. Representación de los primitivos en memoria
-        1. Complemento a 2
+        1. [Enteros: Complemento a 2](./contenido/introduccion/2_elementos_del_lenguaje_c/9_1_complemento_2.md)
         2. Estándar IEEE 754
     10. Conversión entre tipos
     11. Entrada estándar: scanf
