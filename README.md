@@ -28,12 +28,13 @@
     11. Entrada estándar: scanf
 
 3. Control de flujo
-    1. Operadores
+    1. [Operadores](./contenido/introduccion/2_elementos_del_lenguaje_c/operadores_aritmeticos.md)
         1. Aritméticos
         2. De asignación
         3. A nivel de bits
         4. Precedencia de operadores
         5. Lógicos: relacionales, condicionales, ternario, precedencia
+    2. [Condicionales](./contenido/introduccion/2_elementos_del_lenguaje_c/8_condicionales_1.md)
 
 # Programación Estructurada
 Materiales y ejercicios para la materia Programación Estructurada

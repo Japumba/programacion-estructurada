@@ -25,7 +25,7 @@ int main() {
 
 ```
 
-Podemos usar el operador else inmediatamente después de un if, para ejecutar un bloque de código en caso de que la condición sea falsa.
+Podemos usar el operador `else` inmediatamente después de un `if`, para ejecutar un bloque de código en caso de que la condición sea falsa.
 ```c
 #include <stdio.h>
 
@@ -42,7 +42,42 @@ int main() {
 
 ```
 
-Podemos usar operadores relacionales para comparar y obtener valores verdaderos o falsos. Por ejemplo:
+Además de poner un bloque directamente luego de un else, se puede colocar también un if, para tener una estructura `if else-if ... else`. Por ejemplo:
+```c
+#include <stdio.h>
+
+int main() {
+    
+    // cambia el valor de numero para ver que mensaje se imprime.
+    int numero = 0;
+
+    if (numero > 0) {
+        printf("el numero es positivo\n");
+    } else if (numero < 0) {
+        printf("el numero es negativo\n");
+    } else {
+        printf("el numero es cero\n");
+    }
+
+    return 0;
+}
+
+```
+## Operadores relacionales
+Podemos usar operadores relacionales para comparar y obtener valores verdaderos o falsos. Estos operadores regresan 1 si su comparación es verdadera, y 0 si es falsa.
+
+Estos son los operadores relacionales en C:
+| Nombre del operador | Operador | Ejemplo de uso | Regresa 1 si: |
+|----------|----------|----------------|-------------|
+| Igualdad | `==` | `a == b` | a es igual a b |
+| Desigualdad | `!=` | `a != b` | a es distinto de b |
+| Menor que | `<` | `a < b` | a es menor que b |
+| Mayor que | `>` | `a > b` | a es mayor que b |
+| Menor o igual que | `<=` | `a <= b` | a es menor o igual que b |
+| Mayor o igual que | `>=` | `a >= b` | a es mayor o igual que b |
+
+
+Por ejemplo:
 
 ```c
 #include <stdio.h>
@@ -102,3 +137,40 @@ int main() {
 }
 
 ```
+
+## Operadores lógicos
+Muchas veces necesitamos combinar condiciones, para esto usamos operadores lógicos.
+
+Para estos, los operandos se interpretan como **valores de verdad** (0 es falso y cualquier otro valor es verdadero).
+
+Los operadores lógicos en C son:
+
+| Nombre del operador | Operador | Ejemplo de uso | Regresa 1 si: |
+|----------|----------|----------------|-------------|
+| AND | `&&` | `a && b` | a y b son verdaderos |
+| OR | `\|\|` | `a \|\| b` | a o b son verdaderos |
+| NOT | `!` | `!a` | a es falso. Efectivamente niega el valor de a. |
+
+Estas son las "Tablas de Verdad" para los operadores lógicos:
+
+**AND:**
+| a | b | a && b |
+|---|---|--------|
+| 0 | 0 | 0      |
+| 0 | 1 | 0      |
+| 1 | 0 | 0      |
+| 1 | 1 | 1      |
+
+**OR:**
+| a | b | a \|\| b |
+|---|---|---------|
+| 0 | 0 | 0       |
+| 0 | 1 | 1       |
+| 1 | 0 | 1       |
+| 1 | 1 | 1       |
+
+**NOT:**
+| a | !a |
+|---|----|
+| 0 | 1  |
+| 1 | 0  |
