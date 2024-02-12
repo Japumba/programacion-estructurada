@@ -80,12 +80,14 @@ int main() {
 ## Leer más de una variable
 Podemos leer más de una variable en una sola llamada a `scanf`. Para esto, simplemente separamos las etiquetas con espacios (u otros caracteres) en la cadena de formato.
 
+Estos simbolos se leerán separados por espacios, o incluso por un salto de línea.
+
 ```c
 #include <stdio.h>
 
 int main() {
     int numero1, numero2, elementos_leidos;
-    printf("Ingresa dos números enteros, separados por espacios: ");
+    printf("Ingresa dos números enteros, separados por espacios (o con enter): ");
     elementos_leidos = scanf("%d %d", &numero1, &numero2);
     printf("Elementos leídos: %d\n", elementos_leidos);
     printf("Los números que ingresaste son: %d y %d\n", numero1, numero2);
@@ -95,12 +97,13 @@ int main() {
 
 
 ### Leer con formato especial:
+Si agregamos caracteres que no son etiquteas al formato del scanf, estos deben coincidir con la entrada del usuario. De no ser  así, la función sólo leerá hasta donde coincida.
 ```c
 #include <stdio.h>
 
 int main() {
-    unsigned short year;
-    unsigned char month, day;
+    unsigned short year = 9999;
+    unsigned char month = 99, day = 99;
     int elementos_leidos;
     printf("Ingresa tu fecha de nacimiento año/mes/día: ");
     elementos_leidos = scanf("%hu/%hhu/%hhu", &year, &month, &day);
