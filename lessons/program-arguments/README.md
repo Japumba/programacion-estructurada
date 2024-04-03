@@ -87,6 +87,13 @@ gcc main.c -o tutorial-args.exe -Wall
 ./tutorial-args.exe le pasamos mas de dos argumentos
 ```
 
+#### Pasarle un string con espacios
+Normalmente los argumentos se separan por espacios, pero si queremos pasarle un string con espacios, debemos encerrarlo entre comillas dobles.
+
+```shell
+./tutorial-args.exe "hola mundo"
+```
+
 # Ejercicio: programa que suma N numeros
 Crea un programa que, al ser ejecutado, reciba una cantidad de números del usuario e imprima la suma de todos ellos.
 
