@@ -75,7 +75,10 @@ int main()
 
 
 ### Inicializar una variable de tipo estructura
-Podemos inicializar una variable de un tipo de dato estructura similar a un arreglo. Indicamos entre las llaves cada uno de los campos, en el orden en el que fueron declarados:
+Podemos dar un valor inicial a una variable de un tipo de dato estructura similar a un arreglo:
+- Indicamos entre las llaves cada uno de los campos, en el orden en el que fueron declarados
+- Si el campo es un string, podemos inicializarlo con una cadena de texto
+- Si el campo es un arreglo, podemos inicializarlo con una lista de valores
 
 ```C
 #include <stdio.h>
@@ -88,7 +91,12 @@ struct point
 
 int main()
 {
-  struct point p1 = {10, 20, "Punto 1"}; // primero x, luego y y al final name
+  struct point p1 = {
+      10, // x
+      20, // y
+      "Punto 1" // name. Aqui si puede ser sin strcpy porque es el valor inicial, al momento de declarar
+  };
+
   printf("initialized point:     %s(%.2f, %.2f)\n\n", p1.name, p1.x, p1.y);
 
   // si no inicializamos, tiene datos basura:
