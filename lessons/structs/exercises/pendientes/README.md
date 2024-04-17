@@ -29,10 +29,10 @@ El archivo es un archivo de texto, que tiene la información de todos los pendie
   - La segunda linea es el nombre del encargado.
   - La tercera linea es la fecha de entrega, en el formato `anio/mes/dia`.
   - La cuarta linea es el estatus del pendiente, un texto que puede ser `pendiente` o `completado`.
+- Siempre hay `4n+1` lineas en el archivo, donde `n` es la cantidad de pendientes.
+- La cantidad máxima de pendientes es 100.
 
-Siempre hay `4n+1` lineas en el archivo, donde `n` es la cantidad de pendientes.
-
-Ejemplo de archivo:
+**Ejemplo de archivo**:
 ```txt
 3
 Pasear a nanuk
@@ -48,3 +48,12 @@ Isabel
 2024/04/19
 pendiente
 ```
+
+## Especificaciones
+- Declara los tipos de dato struct y enum necesarios para representar los datos.
+- Implementa una función `void imprimir_pendiente(Pendiente pendiente)` que recibe un pendiente y lo imprime en la pantalla.
+- Implementa una función `void imprimir_lista_de_pendientes(Pendiente pendientes[], int cantidad)` que recibe un arreglo de pendientes y la cantidad de pendientes, e imprime todos los pendientes en la pantalla.
+- Implementa una función `void imprimir_fecha(Fecha fecha)` que recibe una fecha y la imprime en la pantalla.
+- Implementa una función `int leer_archivo_de_pendientes(char* nombre_archivo, Pendiente pendientes[])` que recibe el nombre de un archivo y un arreglo de pendientes donde se guardarán los pendientes leídos. La función lee el archivo y guarda los pendientes en el arreglo, y devuelve la cantidad de pendientes leidos.
+- En la función `main` se declara un arreglo de pendientes y éste es el que se pasa a la función `leer_archivo_de_pendientes`. Luego se llama a la función `imprimir_lista_de_pendientes` para mostrar los pendientes en la pantalla.
+- En la función `main` se recibe el nombre del archivo a leer como argumento del programa. Si no se recibe el argumento, se imprime un mensaje de error y se sale del programa con codigo distinto a `0`.
