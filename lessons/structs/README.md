@@ -337,3 +337,74 @@ int main()
     printPlayer(p1);
 }
 ```
+
+## Arreglos de estructuras
+Como con otros tipos de datos, es posible crear un arreglo con elementos de tipo estructura. Se declara y accede de la misma forma que un arreglo de cualquier otro tipo de dato.
+
+```C
+#include <stdio.h>
+
+typedef struct struct_position
+{
+    int x, y;
+} Position;
+
+void printPositionArray(Position positions[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        printf("[%i]: (%i, %i)\n", i, positions[i].x, positions[i].y);
+    }
+}
+
+int main()
+{
+    /*
+     * Un arreglo de 3 posiciones, cada una con sus campos X y Y.
+     * Podemos declarar el arreglo sin asignarle ningun valor incial a sus elementos,
+     * los que tendrán valores indeterminados.
+     *
+     * Luego podemos darle valor a cada elemento segun queramos, con un ciclo o directamente
+     * con sus indices
+     * 
+     * Para acceder a los elementos, primero accedemos al elemento con los corchetes, y
+     * luego accedemos al campo de la estructura con el punto.
+     */
+    Position positions[3];
+    positions[0].x = 10;
+    positions[0].y = 20;
+
+    printf("positions:\n");
+    printPositionArray(positions, 3);
+    printf("\n");
+
+    /*
+     * La sintaxis de valor inicial es muy parecida a la de las matrices.
+     * Cada elemento del arreglo es una estructura de tipo Position, y se indican sus
+     * valores iniciales en el orden en el que aparecen en la estructura.
+     * { x, y }
+     */
+    Position positions_2[3] = {
+        {10, 20},
+        {30, 40},
+        {50, 60}};
+
+    printf("positions_2:\n");
+    printPositionArray(positions, 3);
+    printf("\n");
+    /*
+     * Si solo declaramos algunos de los elementos de forma inicial, los demás
+     * tendrán el valor por defecto del tipo de dato para cada campo.
+     *
+     * En este caso, los elementos 0 y 1 tienen valores, pero los elementos 2, 3 y 4
+     * tendrán su campo X y Y en 0.
+     */
+    Position positions_3[5] = {
+        {100, 200},
+        {300, 400}};
+
+    printf("positions_3:\n");
+    printPositionArray(positions_3, 5);
+    printf("\n");
+}
+```

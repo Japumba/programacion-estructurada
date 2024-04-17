@@ -1,0 +1,149 @@
+37
+Llamar a clientes
+María
+2024/04/30
+pendiente
+Enviar informe de ventas
+Carlos
+2024/04/25
+completado
+Preparar presentación de proyecto
+Luisa
+2024/05/01
+pendiente
+Revisar inventario
+Pedro
+2024/04/28
+completado
+Actualizar software
+Ana
+2024/05/03
+pendiente
+Organizar reunión de equipo
+Jorge
+2024/04/26
+completado
+Redactar acta de reunión
+Claudia
+2024/05/04
+pendiente
+Reparar impresora
+Esteban
+2024/04/29
+completado
+Reservar sala de conferencias
+Lucía
+2024/05/06
+pendiente
+Planificar capacitación
+Roberto
+2024/04/27
+completado
+Limpiar oficina
+Sofía
+2024/05/07
+pendiente
+Actualizar base de datos
+Marta
+2024/04/30
+completado
+Diseñar nuevo logo
+Fernando
+2024/05/08
+pendiente
+Revisar correos electrónicos
+Daniela
+2024/05/01
+completado
+Preparar paquetes de bienvenida
+Iván
+2024/05/09
+pendiente
+Cotizar nuevos proveedores
+Elena
+2024/05/02
+completado
+Elaborar presupuesto anual
+Tomás
+2024/05/10
+pendiente
+Controlar gastos del mes
+Ramiro
+2024/05/03
+completado
+Coordinar visita de clientes
+Patricia
+2024/05/11
+pendiente
+Chequear niveles de stock
+Raquel
+2024/05/04
+completado
+Registrar horas de trabajo
+Óscar
+2024/05/12
+pendiente
+Planificar evento de marketing
+Nora
+2024/05/05
+completado
+Actualizar políticas de la empresa
+Gloria
+2024/05/13
+pendiente
+Programar mantenimiento de equipos
+Sergio
+2024/05/06
+completado
+Redactar newsletter
+Camila
+2024/05/14
+pendiente
+Verificar seguridad informática
+Julio
+2024/05/07
+completado
+Entrevistar candidatos
+Valeria
+2024/05/15
+pendiente
+Asegurar cumplimiento de normativas
+Hugo
+2024/05/08
+completado
+Organizar archivos
+Lorena
+2024/05/16
+pendiente
+Preparar informe de resultados
+Alfonso
+2024/05/09
+completado
+Enviar recordatorios de pago
+Pilar
+2024/05/17
+pendiente
+Revisar propuestas de clientes
+Nicolás
+2024/05/10
+completado
+Actualizar contactos de emergencia
+Teresa
+2024/05/18
+pendiente
+Coordinar mantenimiento de oficina
+Ricardo
+2024/05/11
+completado
+Planificar estrategia de ventas
+Beatriz
+2024/05/19
+pendiente
+Preparar reunión con inversores
+Simón
+2024/05/12
+completado
+Redactar términos y condiciones
+Laura
+2024/05/20
+pendiente
