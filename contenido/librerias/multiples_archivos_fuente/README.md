@@ -107,7 +107,25 @@ int restar(int a, int b) {
 
 ### Separar el programa en archivos
 
-1. Modifica el archivo `main.c`, borrando las firmas y las implementaciones de las funciones `sumar` y `restar`. Tendrás un error de compilación `undeclared function` porque no están declaradas funciones.
+1. Modifica el archivo `main.c`, borrando las firmas y las implementaciones de las funciones `sumar` y `restar`. Te quedará así:
+    ```c
+    // main.c
+    
+    #include <stdio.h>
+
+    // 2) Funcion main
+    int main() {
+        int a = 5;
+        int b = 3;
+
+        printf("La suma de  %d y %d es %d\n", a, b, sumar(a, b));
+        printf("La resta de %d y %d es %d\n", a, b, restar(a, b));
+
+        return 0;
+    }
+    ```
+    
+    Si compilas, tendrás un error de compilación `undeclared function` porque no están declaradas funciones.
     ```shell
     % gcc main.c -o main
     main.c:8:49: error: call to undeclared function 'sumar'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
@@ -118,18 +136,39 @@ int restar(int a, int b) {
                                                     ^
     2 errors generated.
     ```
-2. Crea el el archivo `operaciones.h` en el mismo directorio que `main.c` y copia el contenido del archivo de cabecera. Seguirás teniendo el mismo error de compilación porque no hemos incluido la cabecera en el archivo `main.c`.
-3. Agrega la linea `#include "operaciones.h"` al principio del archivo `main.c`. Nota que usamos comillas dobles en lugar de los corchetes angulares que usamos para incluir librerías externas.
-    1. Si compilas ahora, tendrás un error distinto. En lugar de `undeclared function`, tenemos `undefined symbols`, porque aunque tenemos las firmas de las funciones, no tenemos las implementaciones.
-        ```shell
-        % gcc main.c -o main
-        ld: Undefined symbols:
-        _restar, referenced from:
-            _main in main-f83a40.o
-        _sumar, referenced from:
-            _main in main-f83a40.o
-        clang: error: linker command failed with exit code 1 (use -v to see invocation)
-        ```
+2. Crea el el archivo `operaciones.h` en el mismo directorio que `main.c` y copia el contenido del archivo de cabecera.
+    ```c
+    // operaciones.h
+
+    #ifndef OPERACIONES_H
+    #define OPERACIONES_H
+
+    // 1) Prototipo de las funciones, solamente las firmas
+
+    /**
+    * Recibe dos enteros y devuelve su suma.
+    */
+    int sumar(int a, int b);
+
+    /**
+    * Recibe dos enteros y devuelve la resta del primero menos el segundo.
+    */
+    int restar(int a, int b);
+
+    #endif
+    ```
+    Seguirás teniendo el mismo error de compilación porque no hemos incluido la cabecera en el archivo `main.c`.
+3. Agrega la linea `#include "operaciones.h"` al principio del archivo `main.c`. **Nota que usamos comillas dobles** en lugar de los corchetes angulares que usamos para incluir librerías externas.
+    Si compilas ahora, tendrás un error distinto. En lugar de `undeclared function`, tenemos `undefined symbols`, porque aunque tenemos las firmas de las funciones, no tenemos las implementaciones.
+    ```shell
+    % gcc main.c -o main
+    ld: Undefined symbols:
+    _restar, referenced from:
+        _main in main-f83a40.o
+    _sumar, referenced from:
+        _main in main-f83a40.o
+    clang: error: linker command failed with exit code 1 (use -v to see invocation)
+    ```
 4. Ahora, crea un archivo llamado `operaciones.c` en el mismo directorio que `main.c` y copia el contenido de las implementaciones de las funciones `sumar` y `restar`.
     ```c
     // operaciones.c
