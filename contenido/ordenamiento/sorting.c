@@ -55,20 +55,4 @@ int esta_ordenado(int array[], int size)
  */
 void selection_sort(int array[], int size)
 {
-    /*
-    PSEUDOCÓDIGO
-
-    n = tamaño del arreglo
-
-    Para i de 0 a n-1
-        indice_del_menor = i
-
-        Para j de i+1 a n
-            Si elemento j < elemento indice_del_menor
-                indice_del_menor = j
-
-        Si indice_del_menor != i
-            Intercambiar elementos i e indice_del_menor
-    
-    */
 }
