@@ -144,7 +144,7 @@ typedef struct
         int entero;
         float flotante;
         char caracter;
-    };
+    } valor;
 } Dato;
 
 void imprimir_dato(Dato d)
@@ -152,22 +152,27 @@ void imprimir_dato(Dato d)
     switch (d.tipo)
     {
     case TIPO_ENTERO:
-        printf("Entero: %d\n", d.entero);
+        printf("Entero: %d\n", d.valor.entero);
         break;
     case TIPO_FLOTANTE:
-        printf("Flotante: %f\n", d.flotante);
+        printf("Flotante: %f\n", d.valor.flotante);
         break;
     case TIPO_CARACTER:
-        printf("Caracter: %c\n", d.caracter);
+        printf("Caracter: %c\n", d.valor.caracter);
         break;
     }
 }
 
 int main()
 {
-    Dato d1 = {TIPO_ENTERO, .entero = 10};
-    Dato d2 = {TIPO_FLOTANTE, .flotante = 3.14};
-    Dato d3 = {TIPO_CARACTER, .caracter = 'A'};
+    Dato d1 = {TIPO_ENTERO, .valor.entero = 10};
+
+    Dato d2;
+    d2.tipo = TIPO_FLOTANTE;
+    d2.valor.flotante = 3.14;
+
+    Dato d3 = {TIPO_CARACTER};
+    d3.valor.caracter = 'A';
 
     imprimir_dato(d1);
     imprimir_dato(d2);
