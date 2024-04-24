@@ -205,3 +205,12 @@ int main()
     return 0;
 }
 ```
+## Ejercicio
+1. Declara un tipo de dato `union` que pueda contener un entero, un arreglo de 4 caracteres y un flotante. Llámalo como desees.
+2. Dale un sobrenombre usando `typedef` a la union, por ejemplo `MiDato`.
+3. En la funcion `main`, declara una variable de tipo `MiDato` y asigna un valor a su parte entera.
+4. Implementa la funcion `void imprimir_mi_dato(MiDato d)` que imprima el valor de la parte entera. Prueba tu codigo.
+5. Crea un tipo `enum TipoMiDato` que contenga los tipos de datos que puede almacenar la union `MiDato`: `TIPO_ENTERO`, `TIPO_ARREGLO` y `TIPO_FLOTANTE`.
+6. Modifica la funcion `imprimir_mi_dato` a que sea `void imprimir_mi_dato(MiDato d, enum TipoMiDato t)` para también reciba un valor del tipo `enum TipoMiDato` que declaraste, que indique qué parte de la union deben imprimir. Modifica su implementación para que imprima el valor correspondiente.
+    1. Por ejemplo, si la funcion se llama de la siguiente forma `imprimir_mi_dato(d, TIPO_FLOTANTE)`, debe imprimir el valor flotante de la union.
+7. Prueba tu nueva función con los diferentes tipos de datos que puede almacenar la union.
