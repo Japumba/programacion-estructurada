@@ -20,9 +20,9 @@
     |===================|
 */
 
-int foo(int);
-int bar();
-void baz();
+int nanuk(int);
+int amelie();
+void jaiba();
 
 // Globally defined a.
 // Every function has access to this variable
@@ -32,20 +32,20 @@ int main()
 {
     // which a is this?
     printf("%d\n", a);
-    a = foo(a);
+    a = nanuk(a);
     printf("%d\n", a);
 }
 
 // Declares an argument with the same name as a
 // which value will it have on each execution?
-int foo(int a)
+int nanuk(int a)
 {
-    baz();
+    jaiba();
     printf("%d\n", a);
-    return a + bar();
+    return a + amelie();
 }
 
-int bar()
+int amelie()
 {
     // Declares a local variable with the same name as a
     // which value will it have on each execution?
@@ -55,7 +55,7 @@ int bar()
     return a;
 }
 
-void baz()
+void jaiba()
 {
     // which a is it modifying?
     // is the global definition modified?
