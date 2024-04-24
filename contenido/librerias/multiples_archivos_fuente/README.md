@@ -145,7 +145,7 @@ int restar(int a, int b) {
     ```
 5. Al volver a compilar, necesitamos agregar el nuevo archivo, `operaciones.c`, al comando de compilación.
     ```shell
-    % gcc main.c operaciones.c -o main
+    gcc main.c operaciones.c -o main
     ```
     - `gcc` ejecuta el compilador de C.
     - `main.c` es uno de los archivos que queremos compilar.
