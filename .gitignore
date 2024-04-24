@@ -54,6 +54,18 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-
 # My Drafts
-drafts/
+drafts
+vectors
+ncurses
+clases
+
+# Proyectos
+daily_challenge
+juegos
+
+# Evaluaciones
+evaluaciones
+
+# DsStore
+.DS_Store
