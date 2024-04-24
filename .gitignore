@@ -69,3 +69,6 @@ evaluaciones
 
 # DsStore
 .DS_Store
+
+# Drafts
+draft*
