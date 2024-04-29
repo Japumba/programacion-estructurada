@@ -1,48 +1,46 @@
 #include <stdio.h>
 
-int digital_root(int n)
-{
-    /* Implementa aqui tu funcion */
-    return 42;
-}
+int digital_root(int n);
 
 typedef struct
 {
-    int N, Expected;
+    int n, expected;
 } TestCase;
+
 #define TEST_COUNT 9
 
 int main()
 {
     TestCase tests[TEST_COUNT] = {
-        {16, 7},
-        {942, 6},
-        {132189, 6},
-        {493193, 2},
-        {167346, 9},
-        {0, 0},
-        {7, 7},
-        {195, 6},
-        {992, 2}};
+        {.n = 16, .expected = 7},
+        {.n = 942, .expected = 6},
+        {.n = 132189, .expected = 6},
+        {.n = 493193, .expected = 2},
+        {.n = 167346, .expected = 9},
+        {.n = 0, .expected = 0},
+        {.n = 7, .expected = 7},
+        {.n = 195, .expected = 6},
+        {.n = 992, .expected = 2}};
 
-    int passedTests = 0;
-    for (size_t i = 0; i < TEST_COUNT; i++)
+    for (int i = 0; i < TEST_COUNT; i++)
     {
-        TestCase test = tests[i];
-        int result = digital_root(test.N);
+        printf("TEST[%d]: ", i);
 
-        if (result == test.Expected)
+        int result = digital_root(tests[i].n);
+
+        if (result != tests[i].expected)
         {
-            passedTests++;
+            printf("❌ FAILED: expected digital_root(%d) to be %i but got %i instead.\n", tests[i].n, tests[i].expected, result);
         }
         else
         {
-            printf("Test {%i} FAIL:\n    Expected %i but got %i instead\n\n", test.N, test.Expected, result);
+            printf("✅ PASSED.\n");
         }
     }
+}
 
-    if (passedTests == TEST_COUNT)
-    {
-        printf("OK! All tests passed.\n");
-    }
+int digital_root(int n)
+{
+    /* Implementa aqui tu función */
+    return 42;
 }
